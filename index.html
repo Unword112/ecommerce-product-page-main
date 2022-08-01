@@ -18,17 +18,81 @@
   
 
 <div>
-  <div class="nav">
-    <a class="logo" href="#"><img src="images/logo.svg" /></a>
-      <a href="/">Collections</a>
-        <a href="/">Men</a>
-        <a href="/">Women</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
-        <img class="right" id="picture" src="images/image-avatar.png"/>
-        <img class="right" id="cart" src="images/icon-cart.svg"/>
-  </div>
   <div>
+    <ul>
+      <a class="logo" href="#"><img src="images/logo.svg" /></a>
+      
+      <div class="cart">  
+        <div class="popup">  
+            <div class="row checkout">
+                <img src="images/image-product-1-thumbnail.jpg" />
+                <h4>Fall Limited Edition Sneakers</h4>  
+                <h4>$125.00<p> x 3</p></h4>
+                <h4>$375.00</h4>
+                <img src="images/icon-delete.svg" />
+            </div>  
+            <div class="row checkout">   
+                <span class="checkout-button">Checkout</span>  
+            </div>  
+        </div>  
+    </div>  
+
+      <img class="avatar" id="right-side" src="images/image-avatar.png" />
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      
+    </ul>
+    <div class="line"><hr class="line-under"></div>
+    
+  </div>
+
+  <div class="card">
+    
+    <section class="carousel" aria-label="carousel with product images">
+      
+      <!-- Large, currently-active image -->
+      <div class="current-image">
+          <img src="images/image-product-1.jpg" alt="Succulents 1">
+      </div>
+    
+      <!-- Thumbnail track -->
+      <div class="thumbnails-track">
+        
+        <!-- Thumbnails -->
+        <div class="thumbnails">
+
+          <div class="thumbnail">
+            <button class="thumbnail-button">
+              <img src="images/image-product-1.jpg" alt="image 2 of 5" data-full-alt="Succulents 2">
+            </button>
+          </div>
+    
+          <div class="thumbnail">
+            <button class="thumbnail-button">
+              <img src="images/image-product-2.jpg" alt="image 3 of 5" data-full-alt="Succulents 3">
+            </button>
+          </div>
+    
+          <div class="thumbnail">
+            <button class="thumbnail-button">
+              <img src="images/image-product-3.jpg" alt="image 4 of 5" data-full-alt="Succulents 4">
+            </button>
+          </div>
+    
+          <div class="thumbnail">
+            <button class="thumbnail-button">
+              <img src="images/image-product-4.jpg" alt="image 5 of 5" data-full-alt="Succulents 5">
+            </button>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+
+    
     <div class="text-card">
       <div class="text-head">Sneaker Company</div>
 
@@ -51,5 +115,13 @@
   </div>
 </div>
 
+<script src="script.js" ></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+  integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
 </body>
 </html>
