@@ -453,10 +453,6 @@ input[type="text"], textarea {
   background-color: var(--Light-grayish-blue);
 }
 
-.minus, .plus{
-  
-}
-
 .number-cart {
   border: none;
   text-align: center;
