@@ -175,7 +175,7 @@ a:hover:after {
     pointer-events: none;  
     position: absolute;  
     top: 100%;  
-    width: 250px;  
+    width: 400px;  
     margin-left: -205px;  
     margin-top: 20px;  
     background: #ffffff;  
@@ -235,11 +235,13 @@ a:hover:after {
   display: flex;
 }
 
-.flex-popup h4 {
+.flex-popup p {
   color: var(--Grayish-blue);
+  font-weight: bolder;
 }
 
-.flex-popup p {
+.flex-popup .total {
+  color: var(--Black);
   font-weight: bolder;
 }
 
@@ -248,17 +250,14 @@ a:hover:after {
   height: 20px;
 }
   
-.checkout-button {  
-    padding: 3px 5px;  
+.checkout-button {
+    padding: 15px 130px;  
     background: var(--Orange); 
-    border-radius: 3px; 
-    color: var(--White);  
+    border-radius: 10px; 
+    color: var(--White);
 }  
   
 .checkout-button:hover {  
-    background: #e54040;  
-    -moz-box-shadow: none;  
-    -webkit-box-shadow: none;  
     box-shadow: none;  
 }  
   
