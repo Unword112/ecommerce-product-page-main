@@ -111,6 +111,11 @@ a:hover:after {
     color: var(--Orange);
 }
 
+.logo {
+  cursor: pointer;
+  padding-right: 30px;
+}
+
 /*
 .cart {
     width: 1.5%;
@@ -218,8 +223,30 @@ a:hover:after {
   
 .checkout {  
     margin-top: 10px;  
-    padding-left: 20px;  
-}  
+    padding-left: 20px; 
+}
+
+.checkout-img {
+  width: 40px;
+  height: 40px;
+}
+
+.flex-popup {
+  display: flex;
+}
+
+.flex-popup h4 {
+  color: var(--Grayish-blue);
+}
+
+.flex-popup p {
+  font-weight: bolder;
+}
+
+.delete {
+  width: 20px;
+  height: 20px;
+}
   
 .checkout-button {  
     padding: 3px 5px;  
