@@ -47,6 +47,16 @@ body,html {
     border-top: 1px solid var(--Light-grayish-blue);
 }
 
+.line-cart {
+    border-top: 1px solid var(--Light-grayish-blue);
+}
+
+.line-crt {
+  padding-bottom: 5%;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
 ul { 
     margin: 2rem 10% 0; 
     padding: 0; 
@@ -148,23 +158,7 @@ a:hover:after {
 .cart:hover .popup {  
     visibility: visible;  
     opacity: 1;  
-    pointer-events: auto;  
-    -webkit-animation-duration: 200ms;  
-    -webkit-animation-name: show-popup;  
-    -webkit-animation-direction: normal;  
-    -webkit-animation-timing-function: cubic-bezier(1, 0.18, 1, 0.93);  
-    -moz-animation-duration: 200ms;  
-    -moz-animation-name: show-popup;  
-    -moz-animation-direction: normal;  
-    -moz-animation-timing-function: cubic-bezier(1, 0.18, 1, 0.93);  
-    -o-animation-duration: 200ms;  
-    -o-animation-name: show-popup;  
-    -o-animation-direction: normal;  
-    -o-animation-timing-function: cubic-bezier(1, 0.18, 1, 0.93);  
-    animation-duration: 200ms;  
-    animation-name: show-popup;  
-    animation-direction: normal;  
-    animation-timing-function: cubic-bezier(1, 0.18, 1, 0.93);  
+    pointer-events: auto;    
 }  
 /* popup window style */  
   
@@ -179,13 +173,11 @@ a:hover:after {
     margin-left: -205px;  
     margin-top: 20px;  
     background: #ffffff;  
-    border: 1px solid #cbcbcb;  
-    -moz-border-radius: 5px;  
-    -webkit-border-radius: 5px;  
-    border-radius: 5px;  
-    -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);  
-    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);  
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);  
+    border: none;  
+    border-radius: 5px;   
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    height: 250px;
+    z-index: 999;
 }  
   
 .popup:after {  
@@ -227,8 +219,19 @@ a:hover:after {
 }
 
 .checkout-img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.detail-text {
+  margin-left: 15px;
+  text-align: left;
+}
+
+.delete {
+  margin-left: 25px;
+  margin-top: 15px;
 }
 
 .flex-popup {
@@ -249,13 +252,32 @@ a:hover:after {
   width: 20px;
   height: 20px;
 }
+
+.Cart-popup-text {
+  font-weight: bold;
+  padding-right: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.detail-text {
+  font-weight: bold;
+  
+}
   
 .checkout-button {
-    padding: 15px 130px;  
-    background: var(--Orange); 
-    border-radius: 10px; 
     color: var(--White);
-}  
+    font-weight: bold;
+} 
+
+.checkout-btn {
+  margin-top: 15px;
+  width: 350px;
+  height: 55px;
+  background: var(--Orange); 
+  border-radius: 10px; 
+  border: none;
+}
   
 .checkout-button:hover {  
     box-shadow: none;  
@@ -274,12 +296,58 @@ a:hover:after {
     margin-left: 17rem;
     margin-top: 5rem;
   }
-  
+  #currentImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#currentImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
   
   /** Current image */
   .current-image {
     margin-bottom: 1px;
-    
   }
   
     .current-image a {
@@ -312,11 +380,57 @@ a:hover:after {
     .current-image img {
       display: block;
       object-fit: cover;
-      width: 100%;
-      height: 100%;
-      border-radius: 5%;
+      width: 99%;   
     }
   
+    #currentImg {
+      border-radius: 5%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    #currentImg:hover {opacity: 0.7;}
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    
+    /* Modal Content (Image) */
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+    
+    /* Caption of Modal Image (Image Text) - Same Width as the Image */
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+    
+    /* Add Animation - Zoom in the Modal */
+    .modal-content, #caption {
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
   
   /** Previous and next buttons */
   .button {
@@ -371,7 +485,8 @@ a:hover:after {
     flex: 0 0 var(--thumbnail-width);
     margin-right: 1px;
     position: relative;
-    margin: 10px;
+    margin-top: 5px;
+    margin-right: 22px;
   }
   
     .thumbnail-button {
@@ -557,6 +672,36 @@ input[type="text"], textarea {
 .full-price {
   color: var(--Grayish-blue);
   text-decoration: line-through;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
 }
 
 @media screen and (max-height: 300px) {
