@@ -60,19 +60,7 @@
       
       <!-- Large, currently-active image -->
       <div class="current-image">
-          <img  id="currentImg" src="images/image-product-1.jpg" alt="Succulents 1">
-      </div>
-
-      <div id="myModal" class="modal">
-
-        <!-- The Close Button -->
-        <span class="close">&times;</span>
-      
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content" id="img01">
-      
-        <!-- Modal Caption (Image Text) -->
-        <div id="caption"></div>
+          <img  id="currentImg" src="images/image-product-1.jpg" alt="Succulents 1" onclick="openModal();currentSlide(1)">
       </div>
     
       <!-- Thumbnail track -->
@@ -105,9 +93,54 @@
             </button>
           </div>
         </div>
-    
       </div>
+
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+      
+          <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="images/image-product-1.jpg">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="images/image-product-2.jpg">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="images/image-product-3.jpg">
+          </div>
+          
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="images/image-product-4.jpg">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)"><img src="images/icon-previous.svg"></a>
+          <a class="next" onclick="plusSlides(1)"><img src="images/icon-next.svg"></a>
+        
+        <div class="flex-column">
+          <div class="column">
+            <img class="demo cursor" src="images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" alt="Nature and sunrise">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" alt="Snow">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" alt="Mountains and fjords">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" alt="Northern Lights">
+          </div>
+        </div>
+        </div>
+      </div>
+        
     </section>
+
 
     <div class="container">
       <div class="details">
