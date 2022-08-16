@@ -162,3 +162,13 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+$(document).ready(function() {
+  $('.prev').hover(function () {
+    $('.prev-img').css('filter', 'invert(0.4)');
+    $('.prev-img').css('filter', 'sepia(1)');
+    $('.prev-img').css('filter', 'saturate(6.5)');
+    $('.prev-img').css('filter', 'hue-rotate(360deg)');
+    $('.prev-img').css('filter', 'brightness(1.2)');
+  });
+});
