@@ -825,6 +825,22 @@ img.hover-shadow {
   .modal-content {
     width: 100%;
   }
+
+  body {
+    margin: 0;
+  }
+
+  .nav-tab {
+    display: none;
+  }
+
+  .container {
+    left: 10px;
+  }
+
+  .carousel {
+    display: none;
+  }
 }
 
 @media screen and (max-height: 300px) {
